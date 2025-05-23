@@ -32,27 +32,27 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-gradient">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-gradient glow-text">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto glow-text">
             A showcase of my recent work, demonstrating expertise in modern web development
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-on-scroll">
+            <Card key={index} className="group overflow-hidden bg-white/10 backdrop-blur-sm border border-purple-500/30 shadow-lg hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 hover:scale-105 animate-on-scroll">
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button size="sm" className="bg-white/90 text-gray-800 hover:bg-white">
                     <Link className="h-4 w-4" />
@@ -61,10 +61,10 @@ const ProjectsSection = () => {
               </div>
               
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors glow-text">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-300 mb-4 line-clamp-3 glow-text">
                   {project.description}
                 </p>
                 
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-gradient-to-r from-purple-600/30 to-red-600/30 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30 glow-text"
                     >
                       {tech}
                     </span>
@@ -80,10 +80,10 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                  <Button size="sm" className="flex-1 bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white">
                     Live Demo
                   </Button>
-                  <Button size="sm" variant="outline" className="flex-1">
+                  <Button size="sm" variant="outline" className="flex-1 border-purple-500 text-purple-400 hover:bg-purple-500/10">
                     View Code
                   </Button>
                 </div>
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
+            className="border-2 border-purple-500 hover:border-red-500 text-purple-400 hover:text-red-400 hover:bg-red-500/10 px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 glow-text"
           >
             View All Projects
           </Button>

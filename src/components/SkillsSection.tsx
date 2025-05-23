@@ -15,30 +15,30 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white/50 backdrop-blur-sm">
+    <section id="skills" className="py-20 bg-black/90 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-gradient">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-gradient glow-text">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto glow-text">
             Leveraging cutting-edge technologies to build scalable, performant applications
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="animate-on-scroll">
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">Technical Proficiency</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white glow-text">Technical Proficiency</h3>
             <div className="space-y-6">
               {skills.map((skill, index) => (
                 <div key={skill.name} className="group">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium text-gray-700">{skill.name}</span>
-                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                    <span className="font-medium text-gray-200 glow-text">{skill.name}</span>
+                    <span className="text-sm text-purple-400 glow-text">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                  <div className="w-full bg-gray-800/50 rounded-full h-3 overflow-hidden border border-purple-500/30">
                     <div
-                      className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-1000 ease-out group-hover:scale-105"
+                      className="h-full bg-gradient-to-r from-purple-600 to-red-600 rounded-full transition-all duration-1000 ease-out group-hover:scale-105 shadow-lg shadow-purple-500/50"
                       style={{ 
                         width: `${skill.level}%`,
                         animationDelay: `${index * 200}ms`
@@ -51,15 +51,15 @@ const SkillsSection = () => {
           </div>
 
           <div className="animate-on-scroll">
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">Technologies</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white glow-text">Technologies</h3>
             <div className="grid grid-cols-3 gap-4">
               {technologies.map((tech, index) => (
                 <div
                   key={tech}
-                  className="bg-gradient-to-br from-white to-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100"
+                  className="bg-white/10 backdrop-blur-sm p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-purple-500/30 hover:border-red-500/50"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <span className="font-medium text-gray-700 text-center block">{tech}</span>
+                  <span className="font-medium text-white text-center block glow-text">{tech}</span>
                 </div>
               ))}
             </div>
@@ -72,10 +72,10 @@ const SkillsSection = () => {
             { title: '50+ Projects', subtitle: 'Completed', description: 'Across various industries' },
             { title: '100%', subtitle: 'Client Satisfaction', description: 'Delivering quality solutions' }
           ].map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-gradient mb-2">{stat.title}</div>
-              <div className="text-lg font-semibold text-gray-700 mb-1">{stat.subtitle}</div>
-              <div className="text-gray-600">{stat.description}</div>
+            <div key={index} className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl hover:scale-105 transition-transform duration-300 border border-purple-500/30 hover:border-red-500/50">
+              <div className="text-4xl font-bold text-gradient mb-2 glow-text">{stat.title}</div>
+              <div className="text-lg font-semibold text-purple-400 mb-1 glow-text">{stat.subtitle}</div>
+              <div className="text-gray-300 glow-text">{stat.description}</div>
             </div>
           ))}
         </div>
