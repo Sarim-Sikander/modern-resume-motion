@@ -23,11 +23,11 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg shadow-purple-500/20' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-playfair text-2xl font-bold text-gradient">
+          <div className="font-playfair text-2xl font-bold text-gradient glow-text">
             Portfolio
           </div>
           
@@ -36,7 +36,7 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 capitalize font-medium"
+                className="text-white hover:text-purple-400 transition-colors duration-200 capitalize font-medium glow-text hover:scale-110 transform"
               >
                 {item}
               </button>
@@ -45,7 +45,7 @@ const Navigation = () => {
 
           <Button
             onClick={() => scrollToSection('contact')}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 glow-text shadow-lg shadow-purple-500/30"
           >
             Let's Talk
           </Button>

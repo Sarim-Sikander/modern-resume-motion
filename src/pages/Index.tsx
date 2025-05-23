@@ -1,13 +1,17 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import HeroSection from '@/components/HeroSection';
 import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ContactSection from '@/components/ContactSection';
 import Navigation from '@/components/Navigation';
+import MouseFollower from '@/components/MouseFollower';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
@@ -25,11 +29,24 @@ const Index = () => {
     const animateElements = document.querySelectorAll('.animate-on-scroll');
     animateElements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    // Mouse tracking
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-black cursor-none relative overflow-hidden">
+      <CustomCursor mousePosition={mousePosition} />
+      <MouseFollower mousePosition={mousePosition} />
+      
       <Navigation />
       <HeroSection />
       <SkillsSection />
