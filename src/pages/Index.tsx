@@ -8,6 +8,7 @@ import ContactSection from '@/components/ContactSection';
 import Navigation from '@/components/Navigation';
 import MouseFollower from '@/components/MouseFollower';
 import CustomCursor from '@/components/CustomCursor';
+import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -49,9 +50,13 @@ const Index = () => {
       
       <Navigation />
       <HeroSection />
+      <div className="section-separator my-4"></div>
       <SkillsSection />
+      <div className="section-separator my-4"></div>
       <ProjectsSection />
+      <div className="section-separator my-4"></div>
       <ExperienceSection />
+      <div className="section-separator my-4"></div>
       <ContactSection />
     </div>
   );

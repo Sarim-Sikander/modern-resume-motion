@@ -17,7 +17,7 @@ const CustomCursor = ({ mousePosition }: CustomCursorProps) => {
     const handleMouseMove = () => {
       setIsMoving(true);
       clearTimeout(moveTimeout);
-      moveTimeout = setTimeout(() => setIsMoving(false), 100);
+      moveTimeout = setTimeout(() => setIsMoving(false), 50); // Reduced timeout for faster response
     };
 
     document.addEventListener('mousedown', handleMouseDown);
@@ -36,7 +36,7 @@ const CustomCursor = ({ mousePosition }: CustomCursorProps) => {
     <>
       {/* Main cursor */}
       <div
-        className={`fixed w-6 h-6 pointer-events-none z-[9999] transition-all duration-100 ${
+        className={`fixed w-6 h-6 pointer-events-none z-[9999] transition-all duration-75 ${
           isClicking ? 'scale-75' : isMoving ? 'scale-125' : 'scale-100'
         }`}
         style={{
@@ -45,7 +45,7 @@ const CustomCursor = ({ mousePosition }: CustomCursorProps) => {
           transform: `translate(0, 0) scale(${isClicking ? 0.75 : isMoving ? 1.25 : 1})`,
         }}
       >
-        <div className={`w-full h-full rounded-full border-2 transition-all duration-200 ${
+        <div className={`w-full h-full rounded-full border-2 transition-all duration-100 ${
           isClicking 
             ? 'border-red-400 bg-red-400/30 shadow-lg shadow-red-400/50' 
             : isMoving 
@@ -56,7 +56,7 @@ const CustomCursor = ({ mousePosition }: CustomCursorProps) => {
 
       {/* Cursor trail */}
       <div
-        className="fixed w-2 h-2 bg-white/60 rounded-full pointer-events-none z-[9998] transition-all duration-300"
+        className="fixed w-2 h-2 bg-white/60 rounded-full pointer-events-none z-[9998] transition-all duration-150"
         style={{
           left: mousePosition.x - 4,
           top: mousePosition.y - 4,

@@ -24,7 +24,7 @@ const MouseFollower = ({ mousePosition }: MouseFollowerProps) => {
         id: i,
         x: mousePosition.x,
         y: mousePosition.y,
-        delay: i * 100,
+        delay: i * 50, // Reduced delay for faster response
         type: i % 2 === 0 ? 'star' : 'bird'
       });
     }
@@ -35,8 +35,8 @@ const MouseFollower = ({ mousePosition }: MouseFollowerProps) => {
     const updateParticles = () => {
       setParticles(prev => prev.map(particle => ({
         ...particle,
-        x: particle.x + (mousePosition.x - particle.x) * 0.1,
-        y: particle.y + (mousePosition.y - particle.y) * 0.1,
+        x: particle.x + (mousePosition.x - particle.x) * 0.2, // Increased speed factor
+        y: particle.y + (mousePosition.y - particle.y) * 0.2, // Increased speed factor
       })));
     };
 
@@ -49,7 +49,7 @@ const MouseFollower = ({ mousePosition }: MouseFollowerProps) => {
       {particles.map((particle, index) => (
         <div
           key={particle.id}
-          className="absolute transition-all duration-100 ease-out"
+          className="absolute transition-all duration-75 ease-out" // Faster transition
           style={{
             left: particle.x - 8,
             top: particle.y - 8,

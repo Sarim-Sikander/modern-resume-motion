@@ -91,7 +91,7 @@
   }
 
   .glow-text {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    text-shadow: 0 0 5px currentColor; /* Reduced glow effect */
   }
 
   .floating-stars {
@@ -100,6 +100,15 @@
 
   .cursor-trail {
     animation: cursor-pulse 1s ease-in-out infinite;
+  }
+  
+  .section-separator {
+    height: 3px;
+    background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.7), rgba(239, 68, 68, 0.7), transparent);
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
   }
 }
 
