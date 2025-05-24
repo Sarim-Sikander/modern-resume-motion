@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
 
@@ -69,10 +68,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Profile image - Now visible on all screen sizes */}
+          {/* Right side - Profile image */}
           <div className="flex justify-center lg:justify-end items-center">
             <div className="relative w-80 h-80 lg:w-96 lg:h-96 overflow-hidden">
-              {/* Placeholder for your transparent image */}
+              
+              {/* STEP 1: REMOVE/COMMENT OUT THIS ENTIRE PLACEHOLDER SECTION */}
+              {/* 
               <div className="absolute right-0 top-0 w-full h-full bg-gradient-to-l from-purple-500/20 to-transparent rounded-full border border-purple-500/30 flex items-center justify-center">
                 <div className="text-center text-white/60">
                   <div className="text-lg mb-2">Your Photo Here</div>
@@ -80,14 +81,16 @@ const HeroSection = () => {
                   <div className="text-xs mt-2 px-4">Upload a transparent PNG with your face centered for best results</div>
                 </div>
               </div>
+              */}
               
-              {/* You can replace the placeholder above with your actual image like this: */}
-              {/* <img 
-                src="/path-to-your-image.png" 
-                alt="Profile" 
+              {/* STEP 2: UNCOMMENT AND MODIFY THIS IMAGE SECTION */}
+              <img 
+                src="/src/image.png" 
+                alt="Sarim Sikander - Data Engineer/Scientist" 
                 className="absolute right-0 top-0 w-full h-full object-cover object-center"
                 style={{ clipPath: 'inset(0 0 0 50%)' }}
-              /> */}
+              />
+              
             </div>
           </div>
         </div>
