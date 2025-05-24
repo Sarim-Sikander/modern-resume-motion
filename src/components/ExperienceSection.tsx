@@ -6,11 +6,11 @@ const ExperienceSection = () => {
       company: 'Probabilities Unlimited',
       period: 'Feb 2025 - Present',
       location: 'Islamabad, Pakistan',
-      description: 'Managing the whole architecture of data pipelines, while leading a team of 2 Devs. Implementing and maintaining efficient data pipelines using automation tools.',
+      description: 'Managing the whole architecture of data pipelines. Implementing and maintaining efficient data pipelines using automation tools.',
       achievements: [
-        'Leading a team of 2 developers',
+        'Working with a team of 2 developers',
         'Managing complete data pipeline architecture',
-        'Implementing automation tools like Airflow and AWS Cloud services'
+        'Implementing automation tools like Airflow and Cloud services'
       ],
       tech: ['Airflow', 'AWS', 'FastAPI', 'IQFeed', 'Data Pipelines', 'Team Leadership']
     },
