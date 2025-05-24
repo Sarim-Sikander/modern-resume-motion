@@ -85,7 +85,7 @@ const HeroSection = () => {
               
               {/* STEP 2: UNCOMMENT AND MODIFY THIS IMAGE SECTION */}
               <img 
-                src="/src/image.png" 
+                src="/image.png" 
                 alt="Sarim Sikander - Data Engineer/Scientist" 
                 className="absolute right-0 top-0 w-full h-full object-cover object-center"
                 style={{ clipPath: 'inset(0 0 0 50%)' }}
