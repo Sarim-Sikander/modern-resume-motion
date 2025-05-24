@@ -74,7 +74,7 @@ const SkillsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8 animate-on-scroll">
           {[
-            { title: '5+ Years', subtitle: 'Experience', description: 'Building scalable web applications' },
+            { title: '4+ Years', subtitle: 'Experience', description: 'Building scalable end to end ML, pipelines and Backend applications' },
             { title: '50+ Projects', subtitle: 'Completed', description: 'Across various industries' },
             { title: '100%', subtitle: 'Client Satisfaction', description: 'Delivering quality solutions' }
           ].map((stat, index) => (
