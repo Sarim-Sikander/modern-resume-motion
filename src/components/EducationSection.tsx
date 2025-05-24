@@ -2,28 +2,12 @@
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Master of Computer Science',
-      institution: 'Stanford University',
-      period: '2018 - 2020',
-      grade: 'GPA: 3.9/4.0',
-      description: 'Specialized in Machine Learning and Distributed Systems. Thesis on scalable web architectures.',
-      courses: ['Advanced Algorithms', 'Machine Learning', 'Distributed Systems', 'Web Security']
-    },
-    {
-      degree: 'Bachelor of Software Engineering',
-      institution: 'MIT',
-      period: '2014 - 2018',
-      grade: 'Magna Cum Laude',
-      description: 'Foundation in software development, data structures, and computer science fundamentals.',
-      courses: ['Data Structures', 'Software Design', 'Database Systems', 'Computer Networks']
-    },
-    {
-      degree: 'Full Stack Web Development',
-      institution: 'FreeCodeCamp',
-      period: '2017',
-      grade: 'Certified',
-      description: 'Comprehensive certification covering modern web development technologies and best practices.',
-      courses: ['React.js', 'Node.js', 'MongoDB', 'API Development']
+      degree: 'Bachelors of Science in Computer Science',
+      institution: 'Bahria University',
+      period: '2018 - 2022',
+      grade: 'GPA: 3.53/4.0',
+      description: 'Specialized in Machine Learning and Distributed Systems.',
+      courses: ['Advanced Algorithms', 'Machine Learning', 'Distributed Systems', 'Web Security', 'Data Science']
     }
   ];
 

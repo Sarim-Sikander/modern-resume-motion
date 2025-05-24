@@ -1,17 +1,23 @@
 
 const SkillsSection = () => {
   const skills = [
-    { name: 'React & Next.js', level: 95, category: 'Frontend' },
-    { name: 'TypeScript', level: 90, category: 'Language' },
-    { name: 'Node.js & Express', level: 88, category: 'Backend' },
-    { name: 'AWS & Cloud', level: 85, category: 'DevOps' },
-    { name: 'PostgreSQL & MongoDB', level: 82, category: 'Database' },
-    { name: 'Docker & Kubernetes', level: 78, category: 'DevOps' },
+    { name: 'Python & Machine Learning', level: 95, category: 'Programming' },
+    { name: 'Data Engineering (ETL)', level: 92, category: 'Data' },
+    { name: 'AWS & GCP Cloud', level: 88, category: 'Cloud' },
+    { name: 'SQL & Teradata', level: 90, category: 'Database' },
+    { name: 'Apache Airflow', level: 85, category: 'Data' },
+    { name: 'FastAPI & Django', level: 87, category: 'Backend' },
+    { name: 'Docker & Kubernetes', level: 80, category: 'DevOps' },
+    { name: 'TensorFlow & Deep Learning', level: 83, category: 'ML/AI' },
+    { name: 'Natural Language Processing', level: 82, category: 'ML/AI' },
+    { name: 'Hadoop & PySpark', level: 78, category: 'Big Data' }
   ];
 
   const technologies = [
-    'React', 'Next.js', 'TypeScript', 'Node.js', 'Express', 'GraphQL',
-    'AWS', 'Docker', 'PostgreSQL', 'MongoDB', 'Redis', 'Git'
+    'Python', 'SQL', 'Apache Airflow', 'AWS', 'GCP', 'Teradata',
+    'FastAPI', 'Django', 'Machine Learning', 'TensorFlow', 'Docker',
+    'Kubernetes', 'PostgreSQL', 'MongoDB', 'Redis', 'Git', 'Hadoop',
+    'PySpark', 'BERT', 'NLP', 'ETL', 'JavaScript', 'Node.js', 'R'
   ];
 
   return (

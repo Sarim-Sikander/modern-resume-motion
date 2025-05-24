@@ -2,40 +2,83 @@
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      period: '2022 - Present',
-      description: 'Lead development of enterprise-scale applications using React, Node.js, and AWS. Mentored junior developers and implemented CI/CD pipelines.',
+      title: 'Data Engineer',
+      company: 'Probabilities Unlimited',
+      period: 'Feb 2025 - Present',
+      location: 'Islamabad, Pakistan',
+      description: 'Managing the whole architecture of data pipelines, while leading a team of 2 Devs. Implementing and maintaining efficient data pipelines using automation tools.',
       achievements: [
-        'Reduced application load time by 40%',
-        'Led team of 5 developers',
-        'Implemented microservices architecture'
+        'Leading a team of 2 developers',
+        'Managing complete data pipeline architecture',
+        'Implementing automation tools like Airflow and AWS Cloud services'
       ],
-      tech: ['React', 'Node.js', 'AWS', 'Docker', 'MongoDB']
+      tech: ['Airflow', 'AWS', 'FastAPI', 'IQFeed', 'Data Pipelines', 'Team Leadership']
     },
     {
-      title: 'Full Stack Developer',
-      company: 'Innovation Labs',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Specialized in React ecosystem and cloud deployments.',
+      title: 'Senior Data Engineer',
+      company: 'Bloxx (Akamai Technologies)',
+      period: 'Feb 2024 - Oct 2024',
+      location: 'Islamabad, Pakistan',
+      description: 'Leading a team of MLOps and Data Engineers, fostering collaboration and ensuring successful delivery of projects. Designing and implementing scalable data pipelines.',
       achievements: [
-        'Delivered 15+ successful projects',
-        'Improved code quality with 90% test coverage',
-        'Optimized database queries for better performance'
+        'Led team of MLOps and Data Engineers',
+        'Designed scalable and efficient data pipelines',
+        'Architected and deployed data infrastructure using AWS cloud services'
       ],
-      tech: ['React', 'TypeScript', 'GraphQL', 'PostgreSQL', 'Kubernetes']
+      tech: ['Airflow', 'AWS Glue', 'Stitch', 'Talent', 'AWS', 'ETL', 'MLOps', 'Team Leadership']
     },
     {
-      title: 'Frontend Developer',
-      company: 'StartUp Inc',
-      period: '2019 - 2020',
-      description: 'Built responsive web applications and collaborated with design teams to create exceptional user experiences.',
+      title: 'Data Scientist (Resource Management)',
+      company: 'PTCL',
+      period: 'Feb 2023 - Nov 2023',
+      location: 'Islamabad, Pakistan',
+      description: 'Managing KPIs and building different data source ETL pipelines using AWS and GCP. Worked on major pipelines and Teradata using large data and machine learning models.',
       achievements: [
-        'Increased user engagement by 60%',
-        'Implemented responsive design system',
-        'Reduced bug reports by 50%'
+        'Managed KPIs and built multiple data source ETL pipelines',
+        'Worked with large data using Teradata',
+        'Developed machine learning models for various use cases'
       ],
-      tech: ['React', 'CSS3', 'JavaScript', 'Redux', 'Webpack']
+      tech: ['AWS', 'GCP', 'Teradata', 'ETL Pipelines', 'Machine Learning', 'KPI Management']
+    },
+    {
+      title: 'Engineering Manager - Data/ML',
+      company: 'Stealth Startup',
+      period: 'Oct 2022 - Jan 2023',
+      location: 'San Diego, USA',
+      description: 'Increased sales and revenue by creating creative analytical reports and dashboards to get better insights for business decision making.',
+      achievements: [
+        'Increased sales and revenue by 6.5% in 2 months',
+        'Created creative analytical reports and dashboards',
+        'Provided better business insights through data analysis'
+      ],
+      tech: ['Data Analytics', 'Dashboard Development', 'Business Intelligence', 'Management']
+    },
+    {
+      title: 'Data Scientist',
+      company: 'Turing.com',
+      period: 'March 2022 - Sept 2022',
+      location: 'Palo Alto, CA',
+      description: 'Responsible for the engineering challenges of Turing\'s data science team that enables them to source, search for jobs, and match developers with exciting jobs.',
+      achievements: [
+        'Solved engineering challenges for data science team',
+        'Enabled efficient developer sourcing and job matching',
+        'Improved job search and matching algorithms'
+      ],
+      tech: ['Data Science', 'Machine Learning', 'Job Matching Algorithms', 'Python']
+    },
+    {
+      title: 'Data Scientist',
+      company: 'Sui Southern Gas Company (SSGC)',
+      period: 'May 2021 - Nov 2021',
+      location: 'Karachi, Pakistan',
+      description: 'Completed 3 months internship with fulltime job. Designed and automated innovative digitization and online marketing report tools and dashboards.',
+      achievements: [
+        'Completed internship and transitioned to full-time role',
+        'Designed and automated 3+ innovative digitization tools',
+        'Built marketing report tools and dashboards based on KPIs',
+        'Increased transparency and sales performance'
+      ],
+      tech: ['Dashboard Development', 'KPI Analysis', 'Marketing Analytics', 'Digitization Tools', 'Automation']
     }
   ];
 

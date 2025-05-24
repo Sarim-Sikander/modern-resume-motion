@@ -6,26 +6,50 @@ import { Link } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include real-time inventory, payment processing, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      title: 'Enterprise ETL Data Pipeline',
+      description: 'Scalable data pipeline processing 10M+ records daily using Airflow and AWS. Integrated multiple data sources including APIs, databases, and streaming data with automated monitoring and error handling.',
+      image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80',
+      tech: ['Apache Airflow', 'AWS Glue', 'Python', 'Teradata', 'Docker'],
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'Modern project management tool with drag-and-drop functionality, real-time collaboration, and advanced analytics dashboard.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80',
-      tech: ['Next.js', 'TypeScript', 'Prisma', 'WebSocket'],
+      title: 'Real-time Financial Data API',
+      description: 'High-performance FastAPI backend processing real-time financial data from IQFeed. Built with async architecture, Redis caching, and PostgreSQL for millisecond response times.',
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+      tech: ['FastAPI', 'Python', 'Redis', 'PostgreSQL', 'IQFeed'],
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: 'AI-Powered Analytics',
-      description: 'Business intelligence platform with machine learning integration, data visualization, and predictive analytics capabilities.',
+      title: 'ML-Powered Resume Parser',
+      description: 'Intelligent resume parsing system using NLP and computer vision to extract structured information. Built with Django, deployed on AWS with 96% accuracy rate.',
+      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80',
+      tech: ['Django', 'BERT', 'OpenCV', 'AWS', 'NLP'],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'Social Media Analytics Platform',
+      description: 'Django-based web application (Nizam-e-Ilahi) with integrated ML algorithms for content recommendation and user behavior analysis. Features real-time analytics and Islamic cultural compliance.',
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
+      tech: ['Django', 'Machine Learning', 'PostgreSQL', 'Redis', 'Celery'],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'Multi-Source Data Integration Hub',
+      description: 'Comprehensive ETL system integrating Google, Facebook, Twitter, Reddit APIs with real-time data processing. Handles 1M+ API calls daily with automated retry mechanisms.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'Python', 'TensorFlow', 'D3.js'],
+      tech: ['Python', 'Apache Kafka', 'MongoDB', 'Docker', 'Kubernetes'],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'AI-Powered Chatbot with NLP',
+      description: 'Intelligent conversational AI deployed on GCP with BERT integration. Features sentiment analysis, intent recognition, and seamless Node.js API integration for web applications.',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
+      tech: ['Python', 'BERT', 'Node.js', 'GCP', 'Natural Language Processing'],
       liveUrl: '#',
       githubUrl: '#'
     }
@@ -39,7 +63,7 @@ const ProjectsSection = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto glow-text">
-            A showcase of my recent work, demonstrating expertise in modern web development
+            A showcase of my recent work, demonstrating expertise in modern ML and Backend development
           </p>
         </div>
 

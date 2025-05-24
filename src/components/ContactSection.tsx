@@ -5,17 +5,17 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube } 
 
 const ContactSection = () => {
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Location', value: 'Your City, Country', href: null }
+    { icon: Mail, label: 'Email', value: 'sarimsikander24@gmail.com', href: 'mailto:sarimsikander24@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+92 (335) 3192-953', href: 'tel:+923353192953' },
+    { icon: MapPin, label: 'Location', value: 'Islamabad, Pakistan', href: null }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile', color: 'hover:text-blue-400' },
-    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/yourhandle', color: 'hover:text-blue-400' },
-    { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/yourprofile', color: 'hover:text-blue-600' },
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/yourhandle', color: 'hover:text-pink-400' },
-    { icon: Youtube, label: 'YouTube', href: 'https://youtube.com/@yourchannel', color: 'hover:text-red-500' }
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/sarimsikandercs', color: 'hover:text-blue-400' }
+    // { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/yourhandle', color: 'hover:text-blue-400' },
+    // { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/yourprofile', color: 'hover:text-blue-600' },
+    // { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/yourhandle', color: 'hover:text-pink-400' },
+    // { icon: Youtube, label: 'YouTube', href: 'https://youtube.com/@yourchannel', color: 'hover:text-red-500' }
   ];
 
   return (

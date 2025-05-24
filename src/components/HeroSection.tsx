@@ -27,10 +27,10 @@ const HeroSection = () => {
                 <div className="bg-black/90 backdrop-blur-sm border border-purple-500/50 rounded-lg px-4 py-3 text-sm text-white shadow-lg shadow-purple-500/20 whitespace-nowrap">
                   <div className="text-purple-400 font-semibold mb-1">Looking for:</div>
                   <div className="space-y-1 text-gray-300">
-                    <div>• Senior Frontend Developer</div>
-                    <div>• Full Stack Engineer</div>
-                    <div>• React Specialist</div>
-                    <div>• Technical Lead</div>
+                    <div>• Mid/Senior Python Developer</div>
+                    <div>• Data Engineer</div>
+                    <div>• Data Scientist</div>
+                    <div>• Machine learning engineer</div>
                   </div>
                   {/* Arrow pointing up */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-purple-500/50"></div>
@@ -39,14 +39,14 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 text-gradient leading-tight glow-text">
-              Senior Web
+              Data
               <br />
-              <span className="text-gradient-purple">Developer</span>
+              <span className="text-gradient-purple">Engineer/Scientist</span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed glow-text">
-              Crafting exceptional digital experiences with modern technologies. 
-              <span className="text-gradient-red"> Specialized in React, Node.js, and cloud architecture.</span>
+              Engineering intelligent data solutions that transform business insights with modern technologies.
+              <span className="text-gradient-red"> Specialized in Python, Analytics, Big Data, Machine Learning, and cloud architecture.</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
