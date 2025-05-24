@@ -88,7 +88,7 @@ const HeroSection = () => {
                 src="/image.png" 
                 alt="Sarim Sikander - Data Engineer/Scientist" 
                 className="absolute right-0 top-0 w-full h-full object-cover object-center"
-                style={{ clipPath: 'inset(0 0 0 100%)' }}
+                style={{ clipPath: 'inset(0 0 0 50%)' }}
               />
               
             </div>
