@@ -1,158 +1,132 @@
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { useState } from 'react';
+import { Card } from '@/components/ui/card';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube } from 'lucide-react';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const contactInfo = [
+    { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
+    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: MapPin, label: 'Location', value: 'Your City, Country', href: null }
+  ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const socialLinks = [
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile', color: 'hover:text-blue-400' },
+    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/yourhandle', color: 'hover:text-blue-400' },
+    { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/yourprofile', color: 'hover:text-blue-600' },
+    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/yourhandle', color: 'hover:text-pink-400' },
+    { icon: Youtube, label: 'YouTube', href: 'https://youtube.com/@yourchannel', color: 'hover:text-red-500' }
+  ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+    <section id="contact" className="py-20 relative overflow-hidden animate-on-scroll">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-red-900/10"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gradient mb-6 glow-text">
             Let's Work Together
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto glow-text">
+            Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="animate-on-scroll">
-            <Card className="bg-white/10 backdrop-blur-md border-white/20">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-blue-400"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-blue-400"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <textarea
-                      name="message"
-                      placeholder="Tell me about your project..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder:text-gray-400 focus:border-blue-400 focus:outline-none resize-none"
-                      required
-                    />
-                  </div>
-                  
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-md transition-all duration-300 hover:scale-105"
-                  >
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="animate-on-scroll space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Information */}
+          <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-white mb-6 glow-text">Get in Touch</h3>
               <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    📧
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-4 p-4 bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-lg hover:border-purple-500/40 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-red-600 rounded-full flex items-center justify-center">
+                      <item.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-400">{item.label}</p>
+                      {item.href ? (
+                        <a 
+                          href={item.href} 
+                          className="text-white hover:text-purple-400 transition-colors duration-200 glow-text"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-white glow-text">{item.value}</p>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <p className="text-gray-300">contact@portfolio.dev</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    💼
-                  </div>
-                  <div>
-                    <p className="font-semibold">LinkedIn</p>
-                    <p className="text-gray-300">linkedin.com/in/developer</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    🐙
-                  </div>
-                  <div>
-                    <p className="font-semibold">GitHub</p>
-                    <p className="text-gray-300">github.com/developer</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <h4 className="text-lg font-semibold mb-4">Available for:</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                  Full-stack Development
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                  Technical Consulting
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                  Code Reviews & Mentoring
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                  Project Architecture
-                </li>
-              </ul>
+            {/* Social Links */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6 glow-text">Follow Me</h3>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-12 h-12 bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-full flex items-center justify-center text-white ${social.color} hover:scale-110 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30`}
+                    aria-label={social.label}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="text-center mt-16 animate-on-scroll">
-          <p className="text-gray-400">
-            © 2024 Portfolio. Built with React, TypeScript, and Tailwind CSS.
-          </p>
+          {/* Contact Form */}
+          <Card className="bg-white/5 backdrop-blur-sm border-purple-500/20 p-8">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                  placeholder="Project discussion"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                <textarea
+                  rows={5}
+                  className="w-full px-4 py-3 bg-white/10 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-purple-500/50 glow-text"
+              >
+                Send Message
+              </Button>
+            </form>
+          </Card>
         </div>
       </div>
     </section>

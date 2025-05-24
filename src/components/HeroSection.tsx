@@ -18,9 +18,24 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2 mb-6 animate-float">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2 mb-6 animate-float relative group">
               <Star className="h-4 w-4 text-red-400 animate-pulse" />
-              <span className="text-sm font-medium text-white glow-text">Available for new opportunities</span>
+              <span className="text-sm font-medium text-white glow-text cursor-pointer">Available for new opportunities</span>
+              
+              {/* Hover tooltip for job titles */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-50">
+                <div className="bg-black/90 backdrop-blur-sm border border-purple-500/50 rounded-lg px-4 py-3 text-sm text-white shadow-lg shadow-purple-500/20 whitespace-nowrap">
+                  <div className="text-purple-400 font-semibold mb-1">Looking for:</div>
+                  <div className="space-y-1 text-gray-300">
+                    <div>• Senior Frontend Developer</div>
+                    <div>• Full Stack Engineer</div>
+                    <div>• React Specialist</div>
+                    <div>• Technical Lead</div>
+                  </div>
+                  {/* Arrow pointing up */}
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-purple-500/50"></div>
+                </div>
+              </div>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 text-gradient leading-tight glow-text">
@@ -54,9 +69,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Profile image */}
-          <div className="hidden lg:flex justify-end items-center">
-            <div className="relative w-96 h-96 overflow-hidden">
+          {/* Right side - Profile image - Now visible on all screen sizes */}
+          <div className="flex justify-center lg:justify-end items-center">
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96 overflow-hidden">
               {/* Placeholder for your transparent image */}
               <div className="absolute right-0 top-0 w-full h-full bg-gradient-to-l from-purple-500/20 to-transparent rounded-full border border-purple-500/30 flex items-center justify-center">
                 <div className="text-center text-white/60">
