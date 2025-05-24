@@ -27,16 +27,16 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-playfair text-2xl font-bold text-gradient glow-text">
+          <div className="font-playfair text-2xl font-bold text-gradient">
             Portfolio
           </div>
           
           <div className="hidden md:flex space-x-8">
-            {['home', 'skills', 'projects', 'experience', 'contact'].map((item) => (
+            {['home', 'skills', 'projects', 'education', 'experience', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-white hover:text-purple-400 transition-colors duration-200 capitalize font-medium glow-text hover:scale-110 transform"
+                className="text-white hover:text-purple-400 transition-colors duration-200 capitalize font-medium hover:scale-110 transform"
               >
                 {item}
               </button>
@@ -45,7 +45,7 @@ const Navigation = () => {
 
           <Button
             onClick={() => scrollToSection('contact')}
-            className="bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 glow-text shadow-lg shadow-purple-500/30"
+            className="bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30"
           >
             Let's Talk
           </Button>
